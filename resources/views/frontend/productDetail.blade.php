@@ -18,7 +18,7 @@
                         <ul class="nav nav-tabs" role="tablist">
                             <!-- Main product image tab -->
                             <li class="nav-item">
-                                <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab">
+                                <a class="nav-link active" data-bs-toggle="tab" href="#tabs-1" role="tab">
                                     <div class="product__thumb__pic set-bg"
                                         data-setbg="{{ asset('' . $product->image) }}">
                                     </div>
@@ -29,7 +29,7 @@
                             @if(isset($images) && is_array($images))
                                 @foreach($images as $key => $image)
                                     <li class="nav-item">
-                                        <a class="nav-link" data-toggle="tab" href="#tabs-image-{{ $key + 2 }}" role="tab">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#tabs-image-{{ $key + 2 }}" role="tab">
                                             <div class="product__thumb__pic set-bg" data-setbg="{{ asset('' . $image) }}">
                                             </div>
                                         </a>
@@ -40,9 +40,9 @@
                             <!-- Video tab (only if video exists) -->
                             @if($product->video)
                                 <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#tabs-video" role="tab">
+                                    <a class="nav-link" data-bs-toggle="tab" href="#tabs-video" role="tab">
                                         <div class="product__thumb__pic set-bg"
-                                            data-setbg="{{ asset('frontend/img/shop-details/thumb-4.png') }}">
+                                            data-setbg="{{ asset('frontend/img/shop-details/thumb-5.png') }}">
                                             <i class="fa fa-play"></i>
                                         </div>
                                     </a>
@@ -101,7 +101,7 @@
                                    onclick="openWhatsApp(event)" 
                                    class="btn btn-success" 
                                    target="_blank">
-                                    <i class="fa fa-whatsapp me-2"></i>Contact on WhatsApp
+                                    <i class="fa fa-whatsapp me-2 mt-1"></i> Contact on WhatsApp
                                 </a>
                             </div>
 
@@ -118,10 +118,10 @@
                                     
                                     if (isMobile) {
                                         // Open WhatsApp app
-                                        window.open(`https://wa.me/+923400493948?text=${encodedMessage}`, '_blank');
+                                        window.open(`https://wa.me/+46769551581?text=${encodedMessage}`, '_blank');
                                     } else {
                                         // Open WhatsApp Web
-                                        window.open(`https://web.whatsapp.com/send?phone=+923400493948&text=${encodedMessage}`, '_blank');
+                                        window.open(`https://web.whatsapp.com/send?phone=+46769551581&text=${encodedMessage}`, '_blank');
                                     }
                                 }
                             </script>
@@ -139,10 +139,10 @@
                         <div class="product__details__tab">
                             <ul class="nav nav-tabs" role="tablist">
                                 <li class="nav-item">
-                                    <a class="nav-link active" data-toggle="tab" href="#tabs-5" role="tab">Description</a>
+                                    <a class="nav-link active" data-bs-toggle="tab" href="#tabs-5" role="tab">Description</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#tabs-6" role="tab">Customer
+                                    <a class="nav-link" data-bs-toggle="tab" href="#tabs-6" role="tab">Customer
                                         Reviews(5)</a>
                                 </li>
 
@@ -284,3 +284,6 @@
         transform: translateY(-2px);
     }
 </style>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.6.0/js/bootstrap.min.js"></script>
